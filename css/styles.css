@@ -1,0 +1,194 @@
+/* ===== Base ===== */
+
+:root {
+  --text: #1a1a1a;
+  --text-muted: #666;
+  --bg: #faf8f5;
+  --accent: #2563eb;
+  --border: #e0dcd6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Layout ===== */
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* ===== Intro ===== */
+
+.intro {
+  margin-bottom: 3rem;
+}
+
+.intro p {
+  margin: 0 0 1.25rem;
+}
+
+.lede {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem !important;
+}
+
+.background {
+  margin: 1.5rem 0;
+}
+
+.background p {
+  margin-bottom: 0.5rem;
+}
+
+.roles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.roles li {
+  margin: 0.25rem 0;
+}
+
+.roles strong {
+  font-weight: 600;
+}
+
+/* ===== Links ===== */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Portfolio ===== */
+
+.portfolio {
+  margin-bottom: 3rem;
+}
+
+.portfolio h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.portfolio-section {
+  margin-bottom: 2rem;
+}
+
+.portfolio-section h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem;
+}
+
+.company-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25rem 1rem;
+}
+
+.company-list--short {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.company-list li {
+  font-size: 0.95rem;
+}
+
+.closed {
+  color: var(--text-muted);
+}
+
+.closed::after {
+  content: " (closed)";
+  font-size: 0.8em;
+}
+
+.acquired {
+  color: var(--text-muted);
+}
+
+.acquired::after {
+  content: " (acquired)";
+  font-size: 0.8em;
+}
+
+
+/* ===== Section Headers ===== */
+
+.investing h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+}
+
+/* ===== Footer ===== */
+
+.footer {
+  padding-top: 2rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer a {
+  font-size: 1rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 2rem 1.25rem;
+  }
+
+  .company-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .company-list--short {
+    grid-template-columns: 1fr;
+  }
+}
