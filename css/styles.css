@@ -126,6 +126,15 @@ a:hover {
   font-size: 0.95rem;
 }
 
+.company-list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.company-list a:hover {
+  text-decoration: none;
+}
+
 .closed {
   color: var(--text-muted);
 }
